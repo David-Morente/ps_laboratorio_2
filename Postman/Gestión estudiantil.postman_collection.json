@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "5812f8a7-f795-4f84-ba9b-e04884459eae",
+		"name": "Gestión estudiantil",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37219218"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List user",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/findUser/67a923a7d6e5280b341b3cdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"findUser",
+								"67a923a7d6e5280b341b3cdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"2023_Dmorente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/updatePassword/67a923a7d6e5280b341b3cdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updatePassword",
+								"67a923a7d6e5280b341b3cdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"2023_Dmorente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/deleteUser/67a923a7d6e5280b341b3cdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"deleteUser",
+								"67a923a7d6e5280b341b3cdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emanuel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/updateUser/67a93de23ac3a2f321c44e13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updateUser",
+								"67a93de23ac3a2f321c44e13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "Add course",
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get course by id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get course by id teacher",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5NWQ5M2U4ZDY0MzQ4MTMzNjk2NGUiLCJpYXQiOjE3MzkxNTQ5NTYsImV4cCI6MTczOTE1ODU1Nn0.26rrMXyzaaOeeRDT7uaXBZ1MQoX_n_NaqdsYjP2XOyE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/courses/getCoursesByIdTeacher/67a9539dfe28b7851783e92f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getCoursesByIdTeacher",
+										"67a9539dfe28b7851783e92f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete course",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/courses/deleteCourse/67a954e9f3d60a34396714f3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"deleteCourse",
+										"67a954e9f3d60a34396714f3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update course",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/courses/updateCourse/67a954e9f3d60a34396714f3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"updateCourse",
+										"67a954e9f3d60a34396714f3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"dmorente-2023242@gmail.com\",\r\n    \"password\":\"2023_Dmorente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"David\",\r\n    \"surname\":\"Morente\",\r\n    \"username\":\"dmorente-2023242\",\r\n    \"password\":\"12345678\",\r\n    \"email\":\"dmorente@gmail.com\",\r\n    \"role\":\"STUDENT_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Assignament",
+					"item": [
+						{
+							"name": "Assignament student",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5M2RlMjNhYzNhMmYzMjFjNDRlMTMiLCJpYXQiOjE3MzkxNTY0NDEsImV4cCI6MTczOTE2MDA0MX0.iAFIv3aLL402PT3_7Itqt4vQO4lYsHywRWkmTbTcijQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course\":\"67a9539dfe28b7851783e92f\",\r\n    \"student\":\"67a93de23ac3a2f321c44e13\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/assignament/assignmentCourse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"assignament",
+										"assignmentCourse"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LIst course student",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5M2RlMjNhYzNhMmYzMjFjNDRlMTMiLCJpYXQiOjE3MzkxNjAxNDAsImV4cCI6MTczOTE2Mzc0MH0.063aOMoxCYHvL9Q5fXAdHe4zoiQp3F1xFpbxZhWSEfQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course\":\"67a9539dfe28b7851783e92f\",\r\n    \"student\":\"67a93de23ac3a2f321c44e13\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/assignament/getAssignamentCoursesByIdStudent/67a93de23ac3a2f321c44e13",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"assignament",
+										"getAssignamentCoursesByIdStudent",
+										"67a93de23ac3a2f321c44e13"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"David\",\r\n    \"surname\":\"Morente\",\r\n    \"username\":\"dmorente-2023242\",\r\n    \"password\":\"12345678\",\r\n    \"email\":\"dmorente@gmail.com\",\r\n    \"role\":\"STUDENT_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"dmorente-2023242@gmail.com\",\r\n    \"password\":\"2023_Dmorente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
